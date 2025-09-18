@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJPR9.0 - Marketing Digital para Profesionales de la Salud, Fitness & Wellness</title>
     <style>
-        * {
+        *  {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -14,8 +14,8 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: var(--text); /* Usar variable para el color del texto principal */
-            background: var(--bg); /* Usar variable para el color de fondo */
+            color: #333;
+            background: #F8F8F8;
         }
 
         .container {
@@ -26,7 +26,7 @@
 
         /* Header */
         header {
-            background: var(--card); /* Blanco para el header */
+            background: white;
             padding: 1rem 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: fixed;
@@ -44,12 +44,12 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: var(--accent); /* Color acento para el logo */
+            color: #D96B43;
         }
 
         .cta-header {
-            background: var(--accent); /* Color acento para el CTA del header */
-            color: #fff; /* Blanco */
+            background: #D96B43;
+            color: white;
             padding: 12px 24px;
             border: none;
             border-radius: 5px;
@@ -60,13 +60,13 @@
         }
 
         .cta-header:hover {
-            background: var(--gold); /* Dorado en hover */
+            background: #C45F3D;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--accent), var(--gold)); /* Degradado de acento a dorado */
-            color: #fff; /* Blanco */
+            background: linear-gradient(135deg, #D96B43, #F4B89C);
+            color: white;
             padding: 120px 0 80px;
             text-align: center;
         }
@@ -86,8 +86,8 @@
         }
 
         .cta-button {
-            background: var(--card); /* Blanco para el botón CTA */
-            color: var(--accent); /* Color acento para el texto del botón */
+            background: white;
+            color: #D96B43;
             padding: 15px 30px;
             border: none;
             border-radius: 5px;
@@ -102,20 +102,20 @@
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            color: var(--accent); /* Mantener color acento en hover */
+            color: #D96B43;
         }
 
         /* Services Section */
         .services {
             padding: 80px 0;
-            background: var(--bg); /* Fondo crema claro */
+            background: #F8F8F8;
         }
 
         .services h2 {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: var(--accent); /* Color acento para los títulos */
+            color: #D96B43;
         }
 
         .services-grid {
@@ -126,28 +126,28 @@
         }
 
         .service-card {
-            background: var(--card); /* Blanco para las tarjetas */
+            background: #F6F4EB;
             padding: 2rem;
             border-radius: 10px;
             text-align: center;
-            border: 2px solid #f1f5f9; /* Gris claro */
+            border: 2px solid #F7D7C4;
             transition: border-color 0.3s;
         }
 
         .service-card:hover {
-            border-color: var(--accent); /* Color acento en hover del borde */
+            border-color: #D96B43;
         }
 
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: var(--accent); /* Color acento para los títulos de tarjeta */
+            color: #D96B43;
         }
 
         .service-price {
             font-size: 2rem;
             font-weight: bold;
-            color: var(--accent); /* Color acento para los precios */
+            color: #D96B43;
             margin: 1rem 0;
         }
 
@@ -158,7 +158,7 @@
 
         .service-card li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid #f1f5f9; /* Gris claro */
+            border-bottom: 1px solid #F7D7C4;
         }
 
         .service-card li:last-child {
@@ -168,20 +168,20 @@
         /* Contact Form */
         .contact {
             padding: 80px 0;
-            background: var(--bg); /* Fondo crema claro */
+            background: #F6F4EB;
         }
 
         .contact h2 {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: var(--accent); /* Color acento para el título del contacto */
+            color: #D96B43;
         }
 
         .form-container {
             max-width: 600px;
             margin: 0 auto;
-            background: var(--card); /* Blanco para el formulario */
+            background: white;
             padding: 3rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -195,7 +195,7 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: bold;
-            color: var(--accent); /* Color acento para las etiquetas del formulario */
+            color: #D96B43;
         }
 
         .form-group input,
@@ -203,7 +203,7 @@
         .form-group textarea {
             width: 100%;
             padding: 12px;
-            border: 2px solid #f1f5f9; /* Gris claro */
+            border: 2px solid #F7D7C4;
             border-radius: 5px;
             font-size: 1rem;
             transition: border-color 0.3s;
@@ -213,7 +213,7 @@
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--accent); /* Color acento en foco */
+            border-color: #D96B43;
         }
 
         .form-group textarea {
@@ -222,8 +222,8 @@
         }
 
         .submit-button {
-            background: var(--accent); /* Color acento para el botón de envío */
-            color: #fff; /* Blanco */
+            background: #D96B43;
+            color: white;
             padding: 15px 30px;
             border: none;
             border-radius: 5px;
@@ -235,13 +235,13 @@
         }
 
         .submit-button:hover {
-            background: var(--gold); /* Dorado en hover */
+            background: #C45F3D;
         }
 
         /* About Section */
         .about {
             padding: 80px 0;
-            background: var(--bg); /* Fondo crema claro */
+            background: #F8F8F8;
         }
 
         .about-content {
@@ -254,7 +254,7 @@
         .about-text h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: var(--accent); /* Color acento para el título del about */
+            color: #D96B43;
         }
 
         .about-text p {
@@ -270,13 +270,13 @@
             object-fit: cover;
             display: block;
             margin: 0 auto;
-            border: 5px solid var(--accent); /* Color acento para el borde de la foto */
+            border: 5px solid #D96B43;
         }
 
         /* Footer */
         footer {
-            background: var(--dark); /* Azul grisáceo oscuro para el footer */
-            color: #fff; /* Blanco */
+            background: #D96B43;
+            color: white;
             text-align: center;
             padding: 2rem 0;
         }
@@ -318,7 +318,7 @@
             .services-grid {
                 grid-template-columns: 1fr;
             }
-        }
+      }
     </style>
 </head>
 <body>

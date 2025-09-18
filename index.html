@@ -397,8 +397,17 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    <div style="width: 300px; height: 300px; background: #e9ecef; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #2c5530;">D</div>
+                    <img src="diego.jpg" alt="Foto de Diego Palencia" class="profile-photo">
                 </div>
+                .profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Esto la hará circular */
+    object-fit: cover; /* Asegura que la imagen no se deforme y cubra el círculo */
+    display: block; /* Elimina espacios extra que a veces aparecen */
+    margin: 0 auto; /* Centra la imagen */
+    border: 5px solid #2c5530; /* Opcional: añade un borde verde */
+}
                 <div class="about-text">
                     <h2>Diego Palencia</h2>
                     <p><strong>Master en Traffic Marketing | Certificación NASM</strong></p>

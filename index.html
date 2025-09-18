@@ -14,8 +14,8 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #F8F8F8;
+            color: var(--text); /* Usar variable para el color del texto principal */
+            background: var(--bg); /* Usar variable para el color de fondo */
         }
 
         .container {
@@ -26,7 +26,7 @@
 
         /* Header */
         header {
-            background: white;
+            background: var(--card); /* Blanco para el header */
             padding: 1rem 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: fixed;
@@ -41,14 +41,15 @@
             align-items: center;
         }
 
-        /* Colores de la nueva paleta (Dorada y Crema) */
         .logo {
-            color: #D96B43;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent); /* Color acento para el logo */
         }
 
         .cta-header {
-            background: #D96B43;
-            color: white;
+            background: var(--accent); /* Color acento para el CTA del header */
+            color: #fff; /* Blanco */
             padding: 12px 24px;
             border: none;
             border-radius: 5px;
@@ -59,13 +60,13 @@
         }
 
         .cta-header:hover {
-            background: #C45F3D;
+            background: var(--gold); /* Dorado en hover */
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #D96B43, #F4B89C);
-            color: white;
+            background: linear-gradient(135deg, var(--accent), var(--gold)); /* Degradado de acento a dorado */
+            color: #fff; /* Blanco */
             padding: 120px 0 80px;
             text-align: center;
         }
@@ -85,8 +86,8 @@
         }
 
         .cta-button {
-            background: white;
-            color: #D96B43;
+            background: var(--card); /* Blanco para el botón CTA */
+            color: var(--accent); /* Color acento para el texto del botón */
             padding: 15px 30px;
             border: none;
             border-radius: 5px;
@@ -101,20 +102,20 @@
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            color: #D96B43;
+            color: var(--accent); /* Mantener color acento en hover */
         }
 
         /* Services Section */
         .services {
             padding: 80px 0;
-            background: #F8F8F8;
+            background: var(--bg); /* Fondo crema claro */
         }
 
         .services h2 {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #D96B43;
+            color: var(--accent); /* Color acento para los títulos */
         }
 
         .services-grid {
@@ -125,28 +126,28 @@
         }
 
         .service-card {
-            background: #F6F4EB;
+            background: var(--card); /* Blanco para las tarjetas */
             padding: 2rem;
             border-radius: 10px;
             text-align: center;
-            border: 2px solid #F7D7C4;
+            border: 2px solid #f1f5f9; /* Gris claro */
             transition: border-color 0.3s;
         }
 
         .service-card:hover {
-            border-color: #D96B43;
+            border-color: var(--accent); /* Color acento en hover del borde */
         }
 
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #D96B43;
+            color: var(--accent); /* Color acento para los títulos de tarjeta */
         }
 
         .service-price {
             font-size: 2rem;
             font-weight: bold;
-            color: #D96B43;
+            color: var(--accent); /* Color acento para los precios */
             margin: 1rem 0;
         }
 
@@ -157,7 +158,7 @@
 
         .service-card li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid #F7D7C4;
+            border-bottom: 1px solid #f1f5f9; /* Gris claro */
         }
 
         .service-card li:last-child {
@@ -167,20 +168,20 @@
         /* Contact Form */
         .contact {
             padding: 80px 0;
-            background: #F6F4EB;
+            background: var(--bg); /* Fondo crema claro */
         }
 
         .contact h2 {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #D96B43;
+            color: var(--accent); /* Color acento para el título del contacto */
         }
 
         .form-container {
             max-width: 600px;
             margin: 0 auto;
-            background: white;
+            background: var(--card); /* Blanco para el formulario */
             padding: 3rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -194,7 +195,7 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: bold;
-            color: #D96B43;
+            color: var(--accent); /* Color acento para las etiquetas del formulario */
         }
 
         .form-group input,
@@ -202,7 +203,7 @@
         .form-group textarea {
             width: 100%;
             padding: 12px;
-            border: 2px solid #F7D7C4;
+            border: 2px solid #f1f5f9; /* Gris claro */
             border-radius: 5px;
             font-size: 1rem;
             transition: border-color 0.3s;
@@ -212,7 +213,7 @@
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #D96B43;
+            border-color: var(--accent); /* Color acento en foco */
         }
 
         .form-group textarea {
@@ -221,8 +222,8 @@
         }
 
         .submit-button {
-            background: #D96B43;
-            color: white;
+            background: var(--accent); /* Color acento para el botón de envío */
+            color: #fff; /* Blanco */
             padding: 15px 30px;
             border: none;
             border-radius: 5px;
@@ -234,13 +235,13 @@
         }
 
         .submit-button:hover {
-            background: #C45F3D;
+            background: var(--gold); /* Dorado en hover */
         }
 
         /* About Section */
         .about {
             padding: 80px 0;
-            background: #F8F8F8;
+            background: var(--bg); /* Fondo crema claro */
         }
 
         .about-content {
@@ -253,7 +254,7 @@
         .about-text h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: #D96B43;
+            color: var(--accent); /* Color acento para el título del about */
         }
 
         .about-text p {
@@ -269,13 +270,13 @@
             object-fit: cover;
             display: block;
             margin: 0 auto;
-            border: 5px solid #D96B43;
+            border: 5px solid var(--accent); /* Color acento para el borde de la foto */
         }
 
         /* Footer */
         footer {
-            background: #D96B43;
-            color: white;
+            background: var(--dark); /* Azul grisáceo oscuro para el footer */
+            color: #fff; /* Blanco */
             text-align: center;
             padding: 2rem 0;
         }

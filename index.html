@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJPR9.0 - Marketing Digital para Profesionales de Salud</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2c5530;
+        }
+        
+        .cta-header {
+            background: #2c5530;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .cta-header:hover {
+            background: #1e3a21;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c5530, #4a7c59);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #2c5530;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c5530;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            transition: border-color 0.3s;
+        }
+        
+        .service-card:hover {
+            border-color: #2c5530;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c5530;
+        }
+        
+        .service-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c5530;
+            margin: 1rem 0;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        
+        .service-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .service-card li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Contact Form */
+        .contact {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c5530;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #2c5530;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2c5530;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            background: #2c5530;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .submit-button:hover {
+            background: #1e3a21;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c5530;
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c5530;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">DJPR9.0</div>
+            <a href="#contact" class="cta-header">Agenda Consulta Gratuita</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Marketing Digital para Profesionales de Salud</h1>
+            <p>Ayudo a entrenadores, nutricionistas y terapeutas en Guatemala a conseguir más clientes online con estrategias éticas y efectivas.</p>
+            <a href="#contact" class="cta-button">Solicitar Auditoría SEO Gratuita</a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Servicios Específicos</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Auditoría SEO + Plan</h3>
+                    <div class="service-price">$120</div>
+                    <ul>
+                        <li>Análisis completo de tu sitio web</li>
+                        <li>Identificación de 10 mejoras prioritarias</li>
+                        <li>Plan de acción específico para tu nicho</li>
+                        <li>Reporte en PDF + videollamada explicativa</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Solicitar Ahora</a>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Plan de Contenidos 12 Semanas</h3>
+                    <div class="service-price">$180</div>
+                    <ul>
+                        <li>Estrategia de contenido personalizada</li>
+                        <li>48 ideas de posts con copy incluido</li>
+                        <li>Calendario editorial mensual</li>
+                        <li>Templates para Instagram y Facebook</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Solicitar Ahora</a>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Landing Page + Optimización</h3>
+                    <div class="service-price">$250</div>
+                    <ul>
+                        <li>Diseño de página de captura</li>
+                        <li>Copywriting orientado a conversión</li>
+                        <li>Integración con WhatsApp Business</li>
+                        <li>Optimización para móvil</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Solicitar Ahora</a>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Email Marketing Automatizado</h3>
+                    <div class="service-price">$200</div>
+                    <ul>
+                        <li>Secuencia de 7 emails de bienvenida</li>
+                        <li>Setup en MailChimp o similar</li>
+                        <li>Plantillas personalizadas</li>
+                        <li>Automatización completa</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Solicitar Ahora</a>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Google My Business Pro</h3>
+                    <div class="service-price">$100</div>
+                    <ul>
+                        <li>Optimización completa del perfil</li>
+                        <li>Estrategia de reseñas</li>
+                        <li>Configuración de posts automáticos</li>
+                        <li>Guía de mantenimiento</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Solicitar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div style="width: 300px; height: 300px; background: #e9ecef; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #2c5530;">D</div>
+                </div>
+                <div class="about-text">
+                    <h2>Diego Palencia</h2>
+                    <p><strong>Master en Traffic Marketing | Certificación NASM</strong></p>
+                    <p>Especializado en marketing digital para profesionales de salud y bienestar en Guatemala. He ayudado a decenas de entrenadores personales, nutricionistas y terapeutas a conseguir más clientes online.</p>
+                    <p>Mi enfoque: estrategias éticas, resultados medibles, sin marketing agresivo.</p>
+                    <p><strong>¿Por qué trabajo solo con profesionales de salud?</strong> Porque entiendo tu mercado, tus desafíos y lo que realmente funciona en Guatemala.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Agenda tu Consulta Gratuita</h2>
+            <div class="form-container">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="profesion">Tu Profesión</label>
+                        <select id="profesion" name="profesion" required>
+                            <option value="">Selecciona tu profesión</option>
+                            <option value="entrenador">Entrenador Personal</option>
+                            <option value="nutricionista">Nutricionista</option>
+                            <option value="fisioterapeuta">Fisioterapeuta</option>
+                            <option value="psicologo">Psicólogo</option>
+                            <option value="gimnasio">Dueño de Gimnasio</option>
+                            <option value="wellness">Centro Wellness</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">WhatsApp</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+502" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="servicio">Servicio de Interés</label>
+                        <select id="servicio" name="servicio" required>
+                            <option value="">¿Qué servicio te interesa más?</option>
+                            <option value="auditoria">Auditoría SEO ($120)</option>
+                            <option value="contenido">Plan de Contenidos ($180)</option>
+                            <option value="landing">Landing Page ($250)</option>
+                            <option value="email">Email Marketing ($200)</option>
+                            <option value="google">Google My Business ($100)</option>
+                            <option value="consulta">Solo consulta gratuita</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Cuéntame tu situación actual</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="¿Cuál es tu mayor desafío para conseguir clientes online?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Enviar Solicitud</button>
+                </form>
+                
+                <div id="mensajeExito" style="display: none; background: #d4edda; color: #155724; padding: 15px; border-radius: 5px; margin-top: 20px;">
+                    ✅ Mensaje enviado correctamente. Te contacto en las próximas 24 horas.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DJPR9.0 - Marketing Digital para Profesionales de Salud en Guatemala</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/50200000000?text=Hola Diego, vi tu web y me interesa una consulta sobre marketing digital" class="whatsapp-float" target="_blank">
+        📱
+    </a>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const profesion = document.getElementById('profesion').value;
+            const telefono = document.getElementById('telefono').value;
+            const email = document.getElementById('email').value;
+            const servicio = document.getElementById('servicio').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            // Crear mensaje para WhatsApp
+            const mensajeWhatsApp = `Hola Diego, soy ${nombre}.
+
+Soy ${profesion} y me interesa el servicio: ${servicio}
+
+Mi WhatsApp: ${telefono}
+Mi email: ${email}
+
+Mi situación: ${mensaje}
+
+Vi tu web djpr90.com y quiero agendar una consulta.`;
+            
+            // Abrir WhatsApp con el mensaje
+            const urlWhatsApp = `https://wa.me/50200000000?text=${encodeURIComponent(mensajeWhatsApp)}`;
+            window.open(urlWhatsApp, '_blank');
+            
+            // Mostrar mensaje de éxito
+            document.getElementById('mensajeExito').style.display = 'block';
+            
+            // Limpiar formulario
+            document.getElementById('contactForm').reset();
+            
+            // Scroll al mensaje de éxito
+            document.getElementById('mensajeExito').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Smooth scrolling para los enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
